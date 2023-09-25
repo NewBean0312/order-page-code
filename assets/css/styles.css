@@ -176,6 +176,8 @@ textarea::-webkit-outer-spin-button {
 
 .icon {
   width: 100px;
+  height: auto;
+  color: #03c75a;
 }
 
 .desc {

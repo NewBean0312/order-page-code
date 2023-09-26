@@ -134,6 +134,18 @@ textarea::-webkit-outer-spin-button {
   text-indent: -9999px;
 }
 
+.scroll-x {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scroll-x::-webkit-scrollbar {
+  display: none;
+}
+
 .header-area {
   position: fixed;
   top: 0;
@@ -167,6 +179,7 @@ textarea::-webkit-outer-spin-button {
 .header-area .place-tab {
   display: flex;
   height: 46px;
+  background-color: #03c75a;
 }
 .header-area .tab-inner {
   display: flex;

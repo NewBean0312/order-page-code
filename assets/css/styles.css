@@ -547,6 +547,31 @@ textarea::-webkit-outer-spin-button {
   justify-content: space-between;
   align-items: center;
 }
+.menu-list-area .title-area {
+  display: flex;
+  align-items: center;
+}
+.menu-list-area .title {
+  color: #333;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+.menu-list-area .period {
+  color: #666;
+  font-size: 14px;
+  letter-spacing: -0.3px;
+}
+.menu-list-area .period::before {
+  display: inline-block;
+  margin: 0 10px;
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  background-color: #ededed;
+  vertical-align: middle;
+  content: "";
+}
 
 .container {
   padding-top: 94px;

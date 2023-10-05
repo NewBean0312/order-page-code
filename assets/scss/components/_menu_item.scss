@@ -8,7 +8,7 @@
     border-bottom: 1px solid $booking-color-border144;
   }
 
-  .menu-detail {
+  .menu-detail { 
     display: flex;
     align-items: center;
     flex: 1;
@@ -35,6 +35,62 @@
       display: block;
     }
   }
+
+  .menu-desc {
+    margin-top: 4px;
+    color: $booking-color-text5;
+    letter-spacing: -0.4px;
+    @include multi-ellipsis(14px, 19px, 2);
+  }
+
+  .menu-price {
+    margin-top: 4px;
+    color: $point-color;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  .btn-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-left: 5px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid $booking-color-border150;
+    border-radius: 5px;
+
+    .ico-cart {
+      width: 20px;
+      height: 20px;
+    }
+
+    .num {
+      position: absolute;
+      top: 3px;
+      right: 3px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background-color: $point-color;
+      color:#fff;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 18px;
+      text-align: center;
+    }
+
+    &.disabled {
+      font-size: 12px;
+      border: 0;
+      background-color: #eee;
+      color: #777;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+  }
 }
 
 .menu-name-group {
@@ -55,28 +111,45 @@
   .badge-popular {
     margin-left: 6px;
   }
+}
 
-  .menu-info-group {
-    display: flex;
+.menu-info-group {
+  display: flex;
+  flex-shrink: 0;
+  margin-top: 4px;
+  font-size: 14px;
+
+  .menu-grade {
+    color: $booking-color-text6;
+    font-weight: 700;
     flex-shrink: 0;
-    margin-top: 4px;
-    font-size: 14px;
 
-    .menu-grade {
-        color: $booking-color-text6;
-        font-weight: 700;
+    .ico-star {
+      margin-right: 2px;
+    }
 
-        .ico-star {
-            margin-right: 2px;
-        }
+    & + .menu-number-of-order {
+      &::before {
+        display: inline-block;
+        width: 1px;
+        height: 12px;
+        margin: 0 8px;
+        background-color: $booking-color-bg168;
+        transform: translateY(1px);
+        content: "";
+      }
+    }
+  }
 
-        & + .menu-number-of-order {
-            display: inline-block;
-            width: 1px;
-            height: 12px;
-            margin: 0 8px;
-            content: '';
-        }
+  .menu-number-of-order {
+    color: $booking-color-text5;
+    flex-shrink: 0;
+
+    em {
+      margin-left: 4px;
+      color: $booking-color-text6;
+      font-style: normal;
+      font-weight: 700;
     }
   }
 }

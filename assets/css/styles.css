@@ -466,6 +466,7 @@ textarea::-webkit-outer-spin-button {
   top: 94px;
   margin-top: 10px;
   background-color: #fff;
+  z-index: 5500;
 }
 .menu-category-area .common-inner {
   position: relative;
@@ -606,6 +607,62 @@ textarea::-webkit-outer-spin-button {
 .menu-item .menu-img-area .menu-img {
   display: block;
 }
+.menu-item .menu-desc {
+  margin-top: 4px;
+  color: #8f8f8f;
+  letter-spacing: -0.4px;
+  font-size: 14px;
+  line-height: 19px;
+  max-height: 38px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.menu-item .menu-price {
+  margin-top: 4px;
+  color: #ff3d3b;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.menu-item .btn-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-left: 5px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+}
+.menu-item .btn-cart .ico-cart {
+  width: 20px;
+  height: 20px;
+}
+.menu-item .btn-cart .num {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #ff3d3b;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: center;
+}
+.menu-item .btn-cart.disabled {
+  font-size: 12px;
+  border: 0;
+  background-color: #eee;
+  color: #777;
+  cursor: not-allowed;
+  pointer-events: none;
+}
 
 .menu-name-group {
   display: flex;
@@ -623,25 +680,39 @@ textarea::-webkit-outer-spin-button {
 .menu-name-group .badge-popular {
   margin-left: 6px;
 }
-.menu-name-group .menu-info-group {
+
+.menu-info-group {
   display: flex;
   flex-shrink: 0;
   margin-top: 4px;
   font-size: 14px;
 }
-.menu-name-group .menu-info-group .menu-grade {
+.menu-info-group .menu-grade {
   color: #333;
   font-weight: 700;
+  flex-shrink: 0;
 }
-.menu-name-group .menu-info-group .menu-grade .ico-star {
+.menu-info-group .menu-grade .ico-star {
   margin-right: 2px;
 }
-.menu-name-group .menu-info-group .menu-grade + .menu-number-of-order {
+.menu-info-group .menu-grade + .menu-number-of-order::before {
   display: inline-block;
   width: 1px;
   height: 12px;
   margin: 0 8px;
+  background-color: #ededed;
+  transform: translateY(1px);
   content: "";
+}
+.menu-info-group .menu-number-of-order {
+  color: #8f8f8f;
+  flex-shrink: 0;
+}
+.menu-info-group .menu-number-of-order em {
+  margin-left: 4px;
+  color: #333;
+  font-style: normal;
+  font-weight: 700;
 }
 
 .container {

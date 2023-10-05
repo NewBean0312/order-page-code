@@ -573,6 +573,77 @@ textarea::-webkit-outer-spin-button {
   content: "";
 }
 
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 0 -18px;
+}
+.menu-item:not(:last-child) {
+  border-bottom: 1px solid #f2f2f2;
+}
+.menu-item .menu-detail {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+.menu-item .menu-img-area {
+  position: relative;
+  flex-shrink: 0;
+  margin-right: 12px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.menu-item .menu-img-area:not(.no-img)::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.06);
+  content: "";
+}
+.menu-item .menu-img-area .menu-img {
+  display: block;
+}
+
+.menu-name-group {
+  display: flex;
+  align-items: center;
+}
+.menu-name-group .menu-name {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 22px;
+  color: #333;
+}
+.menu-name-group .ico-new {
+  margin-left: 4px;
+}
+.menu-name-group .badge-popular {
+  margin-left: 6px;
+}
+.menu-name-group .menu-info-group {
+  display: flex;
+  flex-shrink: 0;
+  margin-top: 4px;
+  font-size: 14px;
+}
+.menu-name-group .menu-info-group .menu-grade {
+  color: #333;
+  font-weight: 700;
+}
+.menu-name-group .menu-info-group .menu-grade .ico-star {
+  margin-right: 2px;
+}
+.menu-name-group .menu-info-group .menu-grade + .menu-number-of-order {
+  display: inline-block;
+  width: 1px;
+  height: 12px;
+  margin: 0 8px;
+  content: "";
+}
+
 .container {
   padding-top: 94px;
   background-color: #f4f7f9;
@@ -581,4 +652,15 @@ textarea::-webkit-outer-spin-button {
 .common-inner {
   margin: 0 auto;
   max-width: 720px;
+}
+
+.badge-popular {
+  display: inline-block;
+  padding: 0 5px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 16px;
+  background-color: #ff61a7;
+  color: #fff;
 }/*# sourceMappingURL=styles.css.map */

@@ -27,22 +27,99 @@
   }
 
   .content-top {
-    height: 100px;
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.08);
     z-index: 1;
     border-bottom: 1px solid $booking-color-border122;
     background-color: #fff;
+
+    .common-inner {
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 18px $m-padding 20px;
+    }
+
+    .menu-img-area {
+      position: relative;
+      width: 70px;
+      height: 70px;
+      margin-right: 16px;
+      border-radius: 100%;
+      overflow: hidden;
+      &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(43, 29, 0, 0.1);
+        content: "";
+      }
+    }
+
+    .menu-detail-area {
+      flex: 1;
+      padding-right: 36px;
+    }
+
+    .menu-name {
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+
+      .name {
+        font-size: 18px;
+      }
+
+      .badge {
+        margin-left: 6px;
+        padding: 0 7px;
+        border-radius: 8px;
+        background-color: #333;
+        line-height: 16px;
+        font-size: 11px;
+        letter-spacing: -0.3px;
+        color: #fff;
+      }
+    }
+
+    .amount-select {
+      margin-top: 12px;
+    }
+
+    .btn-close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 48px;
+      height: 48px;
+    }
   }
-  
+
   .content-body {
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     div {
-        background-color: lightcoral;
+      background-color: lightcoral;
     }
   }
 
   .content-bottom {
     padding: 0 10px 10px;
+    .btn-order {
+      display: block;
+      width: 100%;
+      border-radius: 3px;
+      line-height: 52px;
+      font-weight: 700;
+      background-color: $green;
+      color: #fff;
+      @include ellipsis;
+      @include common-inner;
+      &:disabled {
+        background-color: #c9c9c9;
+        color: $booking-color-text131;
+      }
+    }
   }
 }

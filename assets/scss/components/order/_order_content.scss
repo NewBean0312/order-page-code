@@ -6,21 +6,21 @@
     background-color: #fff;
     &::before,
     &::after {
-        display: block;
-        position: absolute;
-        left: 0;
-        width: 100%;
-        height: 5px;
-        background: url('../images/bg-pattern.png') repeat-x;
-        background-size: auto 5px;
-        content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: url("../images/bg-pattern.png") repeat-x;
+      background-size: auto 5px;
+      content: "";
     }
     &::before {
-        top: -5px;
+      top: -5px;
     }
     &::after {
-        bottom: -5px;
-        transform: rotate(180deg);
+      bottom: -5px;
+      transform: rotate(180deg);
     }
   }
 
@@ -28,14 +28,14 @@
     position: relative;
     padding: 26px $m-padding 24px;
     &::after {
-        position: absolute;
-        top: 26px;
-        right: $m-padding;
-        width: 83px;
-        height: 83px;
-        border-radius: 100%;
-        background: url('https://via.placeholder.com/83') no-repeat;
-        content: '';
+      position: absolute;
+      top: 26px;
+      right: $m-padding;
+      width: 83px;
+      height: 83px;
+      border-radius: 100%;
+      background: url("https://via.placeholder.com/83") no-repeat;
+      content: "";
     }
     .title {
       line-height: 1.2;
@@ -53,17 +53,17 @@
     }
 
     .count {
-        margin-top: 8px;
-        line-height: 20px;
-        font-size: 14px;
-        color: $booking-color-text4;
-        letter-spacing: -0.4px;
+      margin-top: 8px;
+      line-height: 20px;
+      font-size: 14px;
+      color: $booking-color-text4;
+      letter-spacing: -0.4px;
     }
   }
 
   .order-content-body {
     border-top: 1px dashed $booking-color-border147;
-    
+
     .no-order {
       padding: 70px 0;
       text-align: center;
@@ -72,6 +72,119 @@
         margin-top: 6px;
         font-size: 14px;
         color: #8f8f8f;
+      }
+    }
+
+    .menu-list {
+      padding: 0 $m-padding;
+    }
+
+    .menu-item {
+      position: relative;
+      align-items: start;
+      padding: 22px $m-padding;
+
+      .menu-name-group {
+        padding-right: 40px;
+      }
+
+      .menu-name {
+        line-height: 23px;
+        font-size: 18px;
+      }
+
+      .menu-desc {
+        margin-top: 2px;
+      }
+
+      .btn-option {
+        display: inline-block;
+        margin-top: 8px;
+        padding: 0 6px;
+        border-radius: 3px;
+        border: 1px solid $booking-color-border109;
+        background-color: $booking-color-bg21;
+        font-size: 12px;
+        color: $booking-color-text4;
+      }
+
+      .amount-and-price {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 18px;
+
+        .menu-price {
+          margin-top: 0;
+          font-size: 18px;
+        }
+      }
+
+      .btn-delete {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 22px 18px;
+
+        .ico-delete {
+          opacity: 0.3;
+          width: 14px;
+        }
+      }
+    }
+
+    .order-total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 $m-padding;
+      padding: 24px 0;
+      border-top: 2px solid $booking-color-border112;
+      font-size: 20px;
+      font-weight: 700;
+
+      .total-price {
+        font-size: 19px;
+        color: $point-color;
+      }
+    }
+  }
+
+  .btn-menu-add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 22px auto 30px;
+    width: 150px;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,0.04);
+    border: 1px solid $booking-color-border101;
+    border-radius: 24px;
+    background-color: #fff;
+    line-height: 48px;
+    color: $booking-color-text2;
+
+    .ico-add {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 13px;
+      height: 13px;
+      margin-right: 6px;
+      &::before {
+        display: inline-block;
+        width: 13px;
+        height: 1px;
+        background-color: $green;
+        content: '';
+      }
+      &::after {
+        display: inline-block;
+        position: absolute;
+        width: 1px;
+        height: 13px;
+        background-color: $green;
+        content: '';
       }
     }
   }

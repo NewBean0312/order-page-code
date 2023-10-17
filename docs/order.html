@@ -9,7 +9,7 @@
   <body>
     <div class="container order">
       <div class="order-form-area">
-        <!-- 주문서타이틀 -->
+        <!-- 주문서 타이틀 -->
         <div class="page-title-area">
           <p class="title">주문서</p>
           <button class="btn-close">
@@ -20,7 +20,9 @@
             />
           </button>
         </div>
-        <!-- // 주문서타이틀 -->
+        <!-- // 주문서 타이틀 -->
+
+        <!-- 주문서 메뉴 -->
         <div class="order-content">
           <div class="common-inner">
             <div class="order-content-top">
@@ -154,7 +156,66 @@
             <i class="ico-add"></i>메뉴추가
           </a>
         </div>
-        <!-- 주문서 메뉴 -->
+        <!-- // 주문서 메뉴 -->
+
+        <!-- 주문자 정보 -->
+        <div class="order-content-extra">
+          <div class="orderer-info-area">
+            <p class="title">주문자 정보</p>
+            <ul class="info-list">
+              <li class="info-item">
+                <p class="info-title">일회용 수저, 포크</p>
+                <div class="option-group">
+                  <div class="option-item">
+                    <input
+                      class="input-radio"
+                      type="radio"
+                      id="need"
+                      name="disposables"
+                      checked
+                    />
+                    <label class="input-radio-button need" for="need">
+                      필요해요
+                    </label>
+                  </div>
+                  <div class="option-item">
+                    <input
+                      class="input-radio"
+                      type="radio"
+                      id="no-need"
+                      name="disposables"
+                    />
+                    <label class="input-radio-button no-need" for="no-need">
+                      필요 없어요
+                    </label>
+                  </div>
+                </div>
+              </li>
+              <li class="info-item">
+                <p class="info-title">요청사항</p>
+                <input
+                  class="input-text"
+                  type="text"
+                  placeholder="(선택) 요청사항을 입력해 주세요."
+                />
+              </li>
+              <li class="info-item">
+                <p class="info-title">
+                  주문자 연락처<span class="fw700 color-point">(필수)</span>
+                </p>
+                <input
+                  class="input-text"
+                  type="text"
+                  placeholder="연락처를 입력해 주세요."
+                  required
+                />
+              </li>
+            </ul>
+          </div>
+          <div class="place-map-area"></div>
+          <div class="agreement-area"></div>
+        </div>
+        <!-- // 주문자 정보 -->
       </div>
     </div>
   </body>

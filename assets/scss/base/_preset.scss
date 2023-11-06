@@ -33,3 +33,10 @@ body.scroll-off {
 .color-point {
   color: $point-color;
 }
+
+.mobile-size {
+  position: relative;
+  width: 768px;
+  max-width: 768px;
+  margin: 0 auto;
+}

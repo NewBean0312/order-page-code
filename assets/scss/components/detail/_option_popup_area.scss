@@ -1,11 +1,12 @@
 .option-popup-area {
   position: fixed;
   top: 0;
-  left: 0;
+  left: 50%;
   overflow: hidden;
   z-index: 1;
   width: 100%;
   height: 0;
+  transform: translateX(-50%);
   &.show {
     z-index: 5000;
     height: 100%;
@@ -15,12 +16,16 @@
     }
 
     .menu-option-popup {
+      max-width: 768px;
+      left: 50%;
       transform: translateY(0);
+      transform: translateX(-50%);
     }
   }
 
   .dimmed-layer {
     position: absolute;
+    left: 0;
     opacity: 0;
   }
 
@@ -34,7 +39,6 @@
     max-height: calc(100% - 45px);
     background-color: $booking-color-border151;
     transform: translateY(110%);
-    transition: transform 0.3s ease;
   }
 
   .content-top-pattern {

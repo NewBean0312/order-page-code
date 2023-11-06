@@ -1,13 +1,14 @@
 .order-type-popup {
   position: fixed;
   bottom: 0;
-  left: 0;
+  left: 50%;
   right: 0;
+  z-index: 10000;
   padding: 32px 0 40px;
   border-radius: 16px 16px 0 0;
   background-color: #fff;
   text-align: center;
-  z-index: 10000;
+  transform: translateX(-50%);
 
   .title {
     color: $booking-color-text1;
